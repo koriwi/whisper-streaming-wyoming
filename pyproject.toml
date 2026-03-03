@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "wyoming-simul-whisper"
+version = "0.1.0"
+description = "Wyoming protocol ASR server with SimulStreaming (streaming Whisper)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+dependencies = [
+    "wyoming>=1.8,<2",
+    "torch>=2.0",
+    "torchaudio",
+    "numpy",
+    "tiktoken",
+    "tqdm",
+    "numba",
+]
+
+[project.scripts]
+wyoming-simul-whisper = "wyoming_simul_whisper.__main__:run"
+
+[tool.setuptools.packages.find]
+include = ["wyoming_simul_whisper*", "simulstreaming*"]
+
+[tool.setuptools.package-data]
+"simulstreaming.whisper.simul_whisper.whisper.assets" = ["*.npz", "*.tiktoken"]
