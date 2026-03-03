@@ -12,8 +12,8 @@ license = { text = "MIT" }
 
 dependencies = [
   "wyoming>=1.8,<2",
-  "torch>=1.13,<2.1",
-  "torchaudio>=0.13,<2.1",
+  "torch>=1.13",
+  "torchaudio",
   "numpy",
   "tiktoken",
   "tqdm",
