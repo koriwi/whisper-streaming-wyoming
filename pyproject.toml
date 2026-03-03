@@ -1,6 +1,6 @@
 [build-system]
 requires = ["setuptools>=61", "wheel"]
-build-backend = "setuptools.backends.legacy:build"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "wyoming-simul-whisper"
@@ -8,16 +8,16 @@ version = "0.1.0"
 description = "Wyoming protocol ASR server with SimulStreaming (streaming Whisper)"
 readme = "README.md"
 requires-python = ">=3.10"
-license = {text = "MIT"}
+license = { text = "MIT" }
 
 dependencies = [
-    "wyoming>=1.8,<2",
-    "torch>=1.13,<2.1",
-    "torchaudio>=0.13,<2.1",
-    "numpy",
-    "tiktoken",
-    "tqdm",
-    "numba",
+  "wyoming>=1.8,<2",
+  "torch>=1.13,<2.1",
+  "torchaudio>=0.13,<2.1",
+  "numpy",
+  "tiktoken",
+  "tqdm",
+  "numba",
 ]
 
 [project.scripts]
